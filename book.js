@@ -1,11 +1,11 @@
-// 1. The list of books
+
 var books = {
     "1": { title: "A Second Match", author: "Eleanor Vance", price: 25, image: "images/1div.png" },
     "2": { title: "The Trumpet of the Swan", author: "E. B. White", price: 30, image: "images/2div.png" },
     "3": { title: "My 60 Memorable Games", author: "Bobby Fischer", price: 35, image: "images/3div.png" }
 };
 
-// 2. Read the book id from the URL (book.html?id=1) and show the book
+
 var id = new URLSearchParams(window.location.search).get("id");
 var book = books[id] || books["1"];
 
@@ -14,7 +14,7 @@ document.getElementById("book-title").textContent = book.title;
 document.getElementById("book-author").textContent = "by " + book.author;
 document.getElementById("book-price").textContent = book.price + " DT";
 
-// 3. Fill the select with the 24 Tunisian governorates
+
 var cities = ["Ariana", "Beja", "Ben Arous", "Bizerte", "Gabes", "Gafsa", "Jendouba",
     "Kairouan", "Kasserine", "Kebili", "Kef", "Mahdia", "Manouba", "Medenine",
     "Monastir", "Nabeul", "Sfax", "Sidi Bouzid", "Siliana", "Sousse",
@@ -28,16 +28,14 @@ for (var i = 0; i < cities.length; i++) {
     select.appendChild(option);
 }
 
-// 4. Check the form when the user clicks "Confirm order"
 document.getElementById("order-form").addEventListener("submit", function (event) {
-    event.preventDefault(); // stop the page from reloading
+    event.preventDefault(); 
 
     var name = document.getElementById("fullname").value.trim();
     var email = document.getElementById("email").value.trim();
     var city = select.value;
     var valid = true;
 
-    // Full name: at least 3 letters
     if (name.length < 3) {
         document.getElementById("fullname-error").textContent = "Please enter your full name.";
         valid = false;
@@ -45,7 +43,6 @@ document.getElementById("order-form").addEventListener("submit", function (event
         document.getElementById("fullname-error").textContent = "";
     }
 
-    // E-mail: must look like text@text.text
     if (!/^\S+@\S+\.\S+$/.test(email)) {
         document.getElementById("email-error").textContent = "Please enter a valid e-mail.";
         valid = false;
@@ -53,7 +50,6 @@ document.getElementById("order-form").addEventListener("submit", function (event
         document.getElementById("email-error").textContent = "";
     }
 
-    // City: must be selected
     if (city === "") {
         document.getElementById("city-error").textContent = "Please select your city.";
         valid = false;
@@ -61,7 +57,6 @@ document.getElementById("order-form").addEventListener("submit", function (event
         document.getElementById("city-error").textContent = "";
     }
 
-    // Everything is correct: show a success message
     if (valid) {
         document.getElementById("success-message").textContent =
             "Thank you " + name + "! Your book will be delivered to " + city + ".";
