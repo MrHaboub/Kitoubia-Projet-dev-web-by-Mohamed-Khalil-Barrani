@@ -1,0 +1,137 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f5ef;
+    color: #222;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #14543f;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 35px;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #222;
+    text-decoration: none;
+}
+
+/* Main content */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+}
+
+/* Book cards */
+.books {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    width: 250px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    color: #222;
+    text-decoration: none;
+}
+
+  .card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: 0.3s;
+  }
+  
+  .card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #d4a017;
+  }
+
+.price {
+    color: #14543f;
+    font-weight: bold;
+}
+
+/* Order page */
+.order {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    text-align: left;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #14543f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+.success {
+    color: green;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #14543f;
+    color: white;
+}

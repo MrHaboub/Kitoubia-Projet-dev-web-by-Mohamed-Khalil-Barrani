@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order a book - KITOUBIA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="">
+            KITOUBIA
+        </a>
+        <nav>
+            <a href="index.html">Books</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="order">
+        <div class="card">
+            <img id="book-image" src="" alt="">
+            <h2 id="book-title"></h2>
+            <p id="book-author"></p>
+            <p class="price" id="book-price"></p>
+        </div>
+
+        <form id="order-form" novalidate>
+            <h2>Your information</h2>
+
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" placeholder="e.g. Ahmed Ben Ali">
+            <span class="error" id="fullname-error"></span>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="example@gmail.com">
+            <span class="error" id="email-error"></span>
+
+            <label for="city">City</label>
+            <select id="city">
+                <option value="">-- Select your city --</option>
+            </select>
+            <span class="error" id="city-error"></span>
+
+            <button type="submit">Confirm order</button>
+            <p class="success" id="success-message"></p>
+        </form>
+    </main>
+
+    <footer id="contact">
+        <p>KITOUBIA - contact@kitoubia.tn - +216 71 000 000</p>
+    </footer>
+
+    <script src="book.js"></script>
+</body>
+</html>
