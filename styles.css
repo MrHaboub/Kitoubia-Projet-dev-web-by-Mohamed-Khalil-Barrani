@@ -1,4 +1,4 @@
-/* General */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,7 +6,7 @@ body {
     color: #222;
 }
 
-/* Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@ nav a {
     text-decoration: none;
 }
 
-/* Main content */
+
 main {
     padding: 40px;
     text-align: center;
@@ -45,7 +45,7 @@ main {
     color: #666;
 }
 
-/* Book cards */
+
 .books {
     display: flex;
     justify-content: center;
@@ -78,7 +78,6 @@ main {
     font-weight: bold;
 }
 
-/* Order page */
 .order {
     display: flex;
     justify-content: center;
@@ -128,7 +127,6 @@ button {
     color: green;
 }
 
-/* Footer */
 footer {
     padding: 20px;
     text-align: center;
